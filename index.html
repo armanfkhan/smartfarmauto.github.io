@@ -1,44 +1,97 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Smart Farm Auto</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
 <style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  margin:0;
-  font-family: Arial, sans-serif;
-  background:#ffffff;
-  color:#222;
-  text-align:center;
+  font-family: 'Poppins', sans-serif;
+  background: #f9fbf9;
+  color: #222;
+  line-height: 1.6;
 }
+
 header {
-  padding:60px 20px;
-  background:#1f3d2b;
-  color:white;
+  background: linear-gradient(135deg, #1f3d2b, #2d6a4f);
+  color: white;
+  padding: 100px 20px;
+  text-align: center;
 }
+
+header img {
+  max-width: 180px;
+  margin-bottom: 25px;
+}
+
+header h1 {
+  font-size: 42px;
+  font-weight: 700;
+}
+
+header p {
+  font-size: 18px;
+  opacity: 0.9;
+  margin-top: 10px;
+}
+
 section {
-  padding:60px 20px;
-  max-width:900px;
-  margin:auto;
+  padding: 80px 20px;
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
 }
-h1 { font-size:42px; margin-bottom:10px; }
-h2 { color:#1f3d2b; }
+
+section h2 {
+  font-size: 32px;
+  margin-bottom: 25px;
+  color: #1f3d2b;
+}
+
+section p {
+  font-size: 18px;
+  color: #555;
+}
+
 .contact {
-  background:#f4f4f4;
-  padding:40px;
+  background: white;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+  border-radius: 15px;
+  padding: 60px 30px;
+  margin-top: 50px;
 }
-footer {
-  padding:20px;
-  font-size:14px;
-  color:#777;
-}
+
 button {
-  padding:12px 25px;
-  background:#1f3d2b;
-  color:white;
-  border:none;
-  font-size:16px;
-  cursor:pointer;
+  margin-top: 20px;
+  padding: 14px 30px;
+  background: #1f3d2b;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background: #163a25;
+}
+
+footer {
+  text-align: center;
+  padding: 40px 20px;
+  font-size: 14px;
+  color: #777;
 }
 </style>
 </head>
@@ -46,16 +99,17 @@ button {
 <body>
 
 <header>
+  <img src="SFA.jpeg" alt="Smart Farm Auto Logo">
   <h1>Smart Farm Auto</h1>
-  <p>Intelligent Automation for Modern Agriculture</p>
+  <p>Intelligent Automation for the Future of Agriculture</p>
 </header>
 
 <section>
   <h2>Our Mission</h2>
   <p>
-  At Smart Farm Auto, our mission is to transform agriculture through intelligent automation,
-  precision technology, and data-driven systems that improve efficiency, reduce operational costs,
-  and support sustainable farming practices worldwide.
+    Smart Farm Auto is dedicated to transforming agriculture through intelligent automation,
+    precision farming technologies, and data-driven systems that enhance productivity,
+    reduce operational costs, and promote sustainable farming practices.
   </p>
 </section>
 
@@ -63,7 +117,9 @@ button {
   <h2>Contact Us</h2>
   <p>Email: info@smartfarmauto.com</p>
   <p>Phone: (Your Phone Number)</p>
-  <button onclick="location.href='mailto:info@smartfarmauto.com'">Send Email</button>
+  <button onclick="location.href='mailto:info@smartfarmauto.com'">
+    Get In Touch
+  </button>
 </section>
 
 <footer>
@@ -72,3 +128,4 @@ button {
 
 </body>
 </html>
+

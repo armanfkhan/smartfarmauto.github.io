@@ -23,37 +23,42 @@
 
         /* Hero Section */
         .hero {
-            padding: 60px 20px 20px 20px;
+            /* We keep the background pure white so the logo box disappears */
+            background: #ffffff; 
+            padding: 80px 20px 30px 20px;
             text-align: center;
-            /* Subtop gradient for depth */
-            background: linear-gradient(180deg, #f0f4f0 0%, #ffffff 100%);
         }
 
         .hero img {
             width: 100%;
-            max-width: 260px;
+            /* Made it bigger as requested */
+            max-width: 380px; 
             height: auto;
-            /* Removed large margin to fix the gap */
             margin-bottom: 5px; 
-            filter: drop-shadow(0 4px 10px rgba(0,0,0,0.05));
+            /* Subtle blend mode to help it sit better */
+            mix-blend-mode: multiply; 
         }
 
         .tagline {
             font-family: 'Montserrat', sans-serif;
             font-size: 1.1rem;
             font-weight: 700;
-            color: #2e7d32; /* Agricultural Green */
+            color: #2e7d32;
             text-transform: uppercase;
             letter-spacing: 2px;
-            margin-top: 0;
         }
 
         /* Content Section */
         .content {
-            padding: 60px 20px;
+            /* Gradient starts here instead of the top so the logo looks seamless */
+            background: linear-gradient(180deg, #ffffff 0%, #f4f7f4 100%);
+            padding: 60px 20px 100px 20px;
+            text-align: center;
+        }
+
+        .inner-content {
             max-width: 800px;
             margin: auto;
-            text-align: center;
         }
 
         h2 {
@@ -69,32 +74,23 @@
             margin-bottom: 30px;
         }
 
-        /* The "Pop" - Contact Card */
         .contact-card {
             margin-top: 50px;
-            padding: 50px 30px;
-            border-radius: 30px;
+            padding: 60px 40px;
+            border-radius: 40px;
             background: #ffffff;
-            /* Soft shadow for depth */
-            box-shadow: 0 20px 60px rgba(0,0,0,0.07);
-            border: 1px solid #f0f0f0;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.08);
+            border: 1px solid rgba(0,0,0,0.02);
             transition: 0.3s ease;
         }
 
         .contact-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 25px 70px rgba(0,0,0,0.1);
-        }
-
-        .contact-details {
-            margin: 15px 0;
-            font-weight: 600;
-            font-size: 1.1rem;
+            transform: translateY(-8px);
         }
 
         button {
             margin-top: 25px;
-            padding: 16px 45px;
+            padding: 18px 50px;
             border-radius: 50px;
             border: none;
             background: #111;
@@ -104,19 +100,20 @@
             text-transform: uppercase;
             letter-spacing: 1px;
             cursor: pointer;
-            transition: all 0.3s ease;
+            transition: 0.3s ease;
         }
 
         button:hover {
             background: #2e7d32;
-            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(46, 125, 50, 0.2);
         }
 
         footer {
             text-align: center;
-            padding: 60px 20px;
+            padding: 40px 20px;
             font-size: 0.85rem;
             color: #aaa;
+            background: #f4f7f4;
         }
     </style>
 </head>
@@ -130,22 +127,22 @@
 </div>
 
 <div class="content">
-    <h2>Our Mission</h2>
-    <p>
-        Smart Farm Auto is dedicated to transforming agriculture through <strong>intelligent automation</strong>, 
-        precision farming technologies, and data-driven systems that enhance productivity, 
-        reduce operational costs, and promote sustainable farming practices.
-    </p>
+    <div class="inner-content">
+        <h2>Our Mission</h2>
+        <p>
+            Smart Farm Auto is dedicated to transforming agriculture through <strong>intelligent automation</strong>, 
+            precision farming technologies, and data-driven systems that enhance productivity, 
+            reduce operational costs, and promote sustainable farming practices.
+        </p>
 
-    <div class="contact-card">
-        <h2>Contact Us</h2>
-        <div class="contact-details">
+        <div class="contact-card">
+            <h2>Contact Us</h2>
             <p>Email: info@smartfarmauto.com</p>
             <p>Phone: +1 (602) 471-1414</p>
+            <button onclick="window.location.href='mailto:info@smartfarmauto.com'">
+                Get In Touch
+            </button>
         </div>
-        <button onclick="window.location.href='mailto:info@smartfarmauto.com'">
-            Get In Touch
-        </button>
     </div>
 </div>
 

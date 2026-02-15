@@ -3,18 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart Farm Auto | Intelligent Agriculture</title>
+    <title>Smart Farm Auto</title>
     
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
     <style>
-        :root {
-            --primary-green: #2e7d32; /* A professional agricultural green */
-            --dark-text: #1a1a1a;
-            --light-bg: #ffffff;
-            --accent-gradient: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
-        }
-
         * {
             margin: 0;
             padding: 0;
@@ -23,50 +16,42 @@
 
         body {
             font-family: 'Inter', sans-serif;
-            background: var(--light-bg);
-            color: var(--dark-text);
+            background: #ffffff;
+            color: #1a1a1a;
             line-height: 1.6;
-            overflow-x: hidden;
         }
 
         /* Hero Section */
         .hero {
-            padding: 100px 20px 40px 20px;
+            padding: 60px 20px 20px 20px;
             text-align: center;
-            background: var(--accent-gradient);
-            border-bottom: 1px solid rgba(0,0,0,0.05);
+            /* Subtop gradient for depth */
+            background: linear-gradient(180deg, #f0f4f0 0%, #ffffff 100%);
         }
 
         .hero img {
             width: 100%;
-            max-width: 280px;
+            max-width: 260px;
             height: auto;
             /* Removed large margin to fix the gap */
-            margin-bottom: 10px; 
-            filter: drop-shadow(0 5px 15px rgba(0,0,0,0.08));
+            margin-bottom: 5px; 
+            filter: drop-shadow(0 4px 10px rgba(0,0,0,0.05));
         }
 
         .tagline {
             font-family: 'Montserrat', sans-serif;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             font-weight: 700;
-            color: var(--primary-green);
+            color: #2e7d32; /* Agricultural Green */
             text-transform: uppercase;
             letter-spacing: 2px;
-            opacity: 0;
-            animation: fadeIn 1.5s forwards ease-out;
+            margin-top: 0;
         }
 
-        /* Animation for the tagline */
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        /* Content Sections */
-        .section {
-            padding: 80px 20px;
-            max-width: 850px;
+        /* Content Section */
+        .content {
+            padding: 60px 20px;
+            max-width: 800px;
             margin: auto;
             text-align: center;
         }
@@ -74,43 +59,99 @@
         h2 {
             font-family: 'Montserrat', sans-serif;
             font-size: 2.2rem;
-            margin-bottom: 25px;
-            position: relative;
-            display: inline-block;
+            margin-bottom: 20px;
+            color: #111;
         }
 
-        /* Cool underline effect for Mission */
-        .mission-title::after {
-            content: '';
-            display: block;
-            width: 50px;
-            height: 4px;
-            background: var(--primary-green);
-            margin: 10px auto 0;
-            border-radius: 2px;
-        }
-
-        .section p {
+        p {
             font-size: 1.15rem;
-            color: #444;
-            max-width: 700px;
-            margin: 0 auto;
+            color: #4a4a4a;
+            margin-bottom: 30px;
         }
 
-        /* Contact Box "Pop" */
-        .contact-box {
-            margin-top: 80px;
-            padding: 60px 40px;
+        /* The "Pop" - Contact Card */
+        .contact-card {
+            margin-top: 50px;
+            padding: 50px 30px;
             border-radius: 30px;
             background: #ffffff;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.08);
-            border: 1px solid rgba(0,0,0,0.03);
-            transition: transform 0.3s ease;
+            /* Soft shadow for depth */
+            box-shadow: 0 20px 60px rgba(0,0,0,0.07);
+            border: 1px solid #f0f0f0;
+            transition: 0.3s ease;
         }
 
-        .contact-box:hover {
+        .contact-card:hover {
             transform: translateY(-5px);
+            box-shadow: 0 25px 70px rgba(0,0,0,0.1);
         }
 
-        .contact-info {
-            margin: 20px 0;
+        .contact-details {
+            margin: 15px 0;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        button {
+            margin-top: 25px;
+            padding: 16px 45px;
+            border-radius: 50px;
+            border: none;
+            background: #111;
+            color: white;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            background: #2e7d32;
+            transform: scale(1.05);
+        }
+
+        footer {
+            text-align: center;
+            padding: 60px 20px;
+            font-size: 0.85rem;
+            color: #aaa;
+        }
+    </style>
+</head>
+<body>
+
+<div class="hero">
+    <img src="SFA.jpeg" alt="Smart Farm Auto Logo">
+    <div class="tagline">
+        Intelligent Automation for the Future of Agriculture
+    </div>
+</div>
+
+<div class="content">
+    <h2>Our Mission</h2>
+    <p>
+        Smart Farm Auto is dedicated to transforming agriculture through <strong>intelligent automation</strong>, 
+        precision farming technologies, and data-driven systems that enhance productivity, 
+        reduce operational costs, and promote sustainable farming practices.
+    </p>
+
+    <div class="contact-card">
+        <h2>Contact Us</h2>
+        <div class="contact-details">
+            <p>Email: info@smartfarmauto.com</p>
+            <p>Phone: +1 (602) 471-1414</p>
+        </div>
+        <button onclick="window.location.href='mailto:info@smartfarmauto.com'">
+            Get In Touch
+        </button>
+    </div>
+</div>
+
+<footer>
+    &copy; 2026 Smart Farm Auto. All Rights Reserved.
+</footer>
+
+</body>
+</html>
